@@ -8,7 +8,7 @@ module.exports = class DepthCalculator {
       for(let key of arr){
         countLvl = Math.max(countLvl, this.calculateDepth(key));
       }
-      return 1 + countLvl;
+      return  ++countLvl;
     }else{
       return 0;
     }
