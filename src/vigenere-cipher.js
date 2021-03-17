@@ -8,6 +8,7 @@ class VigenereCipheringMachine {
   decrypt() {
     throw new CustomError('Not implemented');
     // remove line with error and write your code here
+    console.log('');
   }
 }
 
