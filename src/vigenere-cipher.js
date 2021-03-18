@@ -35,7 +35,6 @@ class VigenereCipheringMachine {
     for (let i = 0; i < arrMessageNums.length; i++) {
       let char1 = arrMessageNums[i];
       let char2 = arrKeyNums[i];
-      // console.log(char1,char2);
     
       if(/[a-z]/i.test(message[i])){
         FinalwordNums.push(String.fromCharCode(((char1 + char2) % 26)+97));

@@ -22,7 +22,7 @@ describe('Transform array', () => {
         it.optional('correctly works with an empty array', () => {
             assert.deepStrictEqual((transform([])), []);
         });
-
+        
         it.optional('throws an Error if arr is not an Array', function() {
             let res = null;
             try {

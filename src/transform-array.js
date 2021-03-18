@@ -5,29 +5,21 @@ module.exports = function transform(arr) {
   if(Array.isArray(arr)){
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] == "--double-next") {
-        if(arr.length-1 > arr.indexOf(arr[i])){          
+        if(arr.length-1 > i ){          
           transformArr.push(arr[i+1]);          
-        }   
+        }
         
       }else if(arr[i] == "--double-prev"){
-        if(arr.indexOf(arr[i]) != 0){          
+        if(i > 0 && arr[i-2] !='--discard-next'){          
           transformArr.push(arr[i-1]);
-        }          
-        // arr.splice(arr[i-1], 1, arr[i-1]);
-        // return arr;
-      }else if(arr[i] == "--discard-next"){
-        if(arr.length-1 > arr.indexOf(arr[i])){
-          ++i;
-          ++i;
         }
-        // arr.splice(arr[i-1], 2);
-        // return arr;
+        
+      }else if(arr[i] == "--discard-next"){
+        i++;
       }else if(arr[i] == "--discard-prev"){
-        if(arr.indexOf(arr[i]) != 0){          
-          transformArr.pop()
-        }          
-        // arr.splice(arr[i-2], 2);
-        // return arr;
+        if(transformArr.length && arr[i - 2] != '--discard-next'){          
+          transformArr.pop();
+        }
       }else{
         transformArr.push(arr[i]);
       }      
