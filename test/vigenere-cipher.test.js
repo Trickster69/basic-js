@@ -81,7 +81,7 @@ describe('Vigenere cipher', () => {
                 
                 const encrypted = directMachine.encrypt
                 (testStr, testKey);
-                console.log(`testStr:${testStr} testKey:${testKey} ВЫХОД${testStr}`);
+                // console.log(`testStr:${testStr} testKey:${testKey} ВЫХОД${testStr}`);
 
                 assert.equal(directMachine.decrypt(encrypted, testKey), testStr);
             }

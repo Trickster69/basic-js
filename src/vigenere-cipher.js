@@ -78,7 +78,7 @@ class VigenereCipheringMachine {
     }
     // console.log(arrMessageNums);
     // console.log(arrKeyNums);
-    g
+    
     for (let i = 0; i < arrMessageNums.length; i++) {
       let char1 = arrMessageNums[i];
       let char2 = arrKeyNums[i];
