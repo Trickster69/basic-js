@@ -78,10 +78,7 @@ describe('Vigenere cipher', () => {
             for (let i = 2; i < 200; i += 1) {
                 const testStr = createTestString(i);
                 const testKey = createTestKey(i + i % 2);
-                
-                const encrypted = directMachine.encrypt
-                (testStr, testKey);
-
+                const encrypted = directMachine.encrypt(testStr, testKey);
                 assert.equal(directMachine.decrypt(encrypted, testKey), testStr);
             }
         });
